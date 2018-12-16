@@ -12,7 +12,15 @@ To run this project, make sure you have this:
 ## Create "users" table inside world db in MySql
 ```
 USE world;
-CREATE TABLE users(id BIGINT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(200), age INT, fk_city BIGINT, username VARCHAR(100), password VARCHAR(300));
+CREATE TABLE users
+(
+id BIGINT PRIMARY KEY AUTO_INCREMENT, 
+name VARCHAR(200), 
+age INT, 
+fk_city BIGINT, 
+username VARCHAR(100), 
+password VARCHAR(300)
+);
 ```
 Usually world db is already created by MySql
 
