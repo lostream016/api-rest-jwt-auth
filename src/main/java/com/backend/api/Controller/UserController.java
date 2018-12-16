@@ -2,7 +2,6 @@ package com.backend.api.Controller;
 
 import com.backend.api.DAO.UserDAO;
 import com.backend.api.Model.User;
-import com.backend.api.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,9 +16,6 @@ import java.util.List;
 public class UserController {
     @Autowired
     UserDAO userDAO;
-
-    @Autowired
-    UserRepository ss;
 
     /* Save User */
     @PostMapping("/users")
