@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.function.Function;
 
+import static com.backend.api.Config.SystemParameter.OWNER;
 import static com.backend.api.Config.SystemParameter.ACCESS_TOKEN_VALIDITY_SECONDS;
 import static com.backend.api.Config.SystemParameter.SIGNING_KEY;
 
@@ -55,7 +56,7 @@ public class JwtTokenUtil implements Serializable {
 
         return Jwts.builder()
                 .setClaims(claims)
-                .setIssuer("http://devglan.com")
+                .setIssuer(OWNER)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + ACCESS_TOKEN_VALIDITY_SECONDS*1000))
                 .signWith(SignatureAlgorithm.HS256, SIGNING_KEY)
