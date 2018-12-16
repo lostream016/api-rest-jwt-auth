@@ -1,5 +1,5 @@
-# api-rest
-This is project example to build a simple REST web service using java spring boot
+# api-rest-jwt-auth
+This is project example to build a simple REST web service with JSON Web Token (JWT) authentication using java spring boot 2
 
 To run this project, make sure you have this:
 - IntelliJ Idea or else (optional)
@@ -12,7 +12,7 @@ To run this project, make sure you have this:
 ## Create "users" table inside world db in MySql
 ```
 USE world;
-CREATE TABLE users(id BIGINT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(200), age INT, fk_city BIGINT);
+CREATE TABLE users(id BIGINT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(200), age INT, fk_city BIGINT, username VARCHAR(100), password VARCHAR(300));
 ```
 Usually world db is already created by MySql
 
