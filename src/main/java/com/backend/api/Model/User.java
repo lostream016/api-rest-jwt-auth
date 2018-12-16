@@ -19,6 +19,8 @@ public class User {
     private String name;
     private Integer age;
     private Long fk_city;
+    private String username;
+    private String password;
 
     public Long getId() {
         return id;
@@ -50,6 +52,22 @@ public class User {
 
     public void setFk_city(Long fk_city) {
         this.fk_city = fk_city;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }
