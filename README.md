@@ -57,8 +57,9 @@ mvn spring-boot:run
 ## Generate Jwt Token Using Admin Role
 Access this link below :
 ```
-Method POST : http://localhost:8080/token/generate-token <br/>
-<br/>Request Header : 
+Method POST : http://localhost:8080/token/generate-token 
+
+Request Header : 
 - Content-Type : application/json
 
 Request Body :
