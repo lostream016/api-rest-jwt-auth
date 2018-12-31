@@ -24,6 +24,13 @@ password VARCHAR(300)
 ```
 Usually world db is already created by MySql
 
+## Data Initialization (Admin Role)
+Run this query below
+```
+INSERT INTO users(id, age, fk_city, name, username, password) 
+VALUES(1, 24, 200, 'Admin', 'admin50', '$2a$10$wysmeUeqHgvwCydDNW8QfO9zKS1MX/jfLXKAsj86O9dNkOIgFAfrO')
+```
+
 ## Modify application.properties
 Modify this file in 
 ```
@@ -45,4 +52,18 @@ or you just open the project and execute maven clean install
 ## Run the Project
 ```
 mvn spring-boot:run
+```
+
+## Generate Jwt Token Using Admin Role
+Access this link below :
+```
+Method POST : http://localhost:8080/token/generate-token
+Request Header : 
+- Content-Type : application/json
+
+Request Body :
+{
+	"username" : "admin50",
+	"password" : "admin500"
+}
 ```
